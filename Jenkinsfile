@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Echo') {
       steps {
-        echo 'Ahoooj from another branch'
+        echo 'Ahoooj from another branch, with more updates'
       }
     }
   }
