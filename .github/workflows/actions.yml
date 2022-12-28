@@ -1,0 +1,14 @@
+name: Validate PR title
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+jobs:
+  Validate-PR-Message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull Request title rules
+        uses: deepakputhraya/action-pr-title@v1.0.2
+        with:
+          # regex: '([a-z])+\/([a-z])+' # Regex the title should match.
+          allowed_prefixes: 'COR,RCUI,CC' # title should start with the given prefix
+          prefix_case_sensitive: true
